@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: gray;
+}
+
+.container {
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+.link-logo {
+margin: auto;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
+    opacity: .5;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+header nav .menu li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav .menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    opacity: .7;
+}
+
+header nav .menu li a:hover{
+    opacity: 1;
+    border-bottom: 1px solid #fff;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.text {
+    width: 100%;
+    display: inline-block;
+}
+
+.title {
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title-description {
+    display: inline-block;
+    width: 100%;
+    color: #cecece;
+    line-height: 25px;
+    text-align: center;
+}
+
+.botons {
+    text-align: center;
+}
+
+.boton {
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.link-boton {
+    text-decoration: none;
+    color: #fff;
+}
+
+.explore {background: #5126d2; opacity: .7;}
+.explore:hover{opacity: 1;}
+
+.sell {margin-left: 20px;background: rgba(255, 255, 255, 0.123); opacity: .7;}
+.sell:hover {opacity: 1;}
+
+.works-box {
+    margin-top: 20px;
+}
+.works {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.works-box, .jobs-box {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.one {
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.two {
+    margin-right: 50px;
+}
+
+.jobs {
+    display: inline-block;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.486);
+}
+
+/* IMAGENES (NFTS PRUEBA 1) */
+
+.box-nfts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* PRUEBA DE CAJAS DE NFTS. PRUEBA 1 */
+.box-one, .box-two, .box-three, .box-four, .box-five, .box-six, .box-seven {
+    width: 187px;
+    height: 140px;
+    border-radius: 10px;
+    margin-bottom: 10px;}
+
+/* LOGOS DE BLOCKCHAIN*/
+.blockchain {
+    width: 100%;
+    text-align: center;
+}
+
+.binance {
+    width: 200px;
+    opacity: .5;
+}
+.binance:hover {
+opacity: 1;
+cursor: pointer;
+}
+
+.ethereum {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    opacity: .5;
+}
+.ethereum:hover {
+    opacity: 1;
+    cursor: pointer;
+    }
+
+.open-sea {
+    width: 200px;
+    opacity: .5;
+}
+.open-sea:hover {
+    opacity: 1;
+    cursor: pointer;
+    }
+
+    /* FOOTER */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.footer-box {
+width: 50%;
+}
+
+.luther-nft {
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.luther-description {
+    color: #cecece;
+}
+
+.footer-box-two {
+    width: 50%;
+    text-align: center;
+}
+
+.us-title {
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.us-list {
+    list-style: none;
+}
+
+.us-list li {
+    margin-bottom: 15px;
+}
+
+.link-us {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #cecece9a;
+
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.link-discord {
+    color: #7289da;
+    font-size: 50px;
+    opacity: .5;
+}
+
+.link-discord:hover {
+    opacity: 1;
+}
+
+.link-telegram {
+    color: #0088cc;
+    font-size: 50px;
+    opacity: .5;
+}
+.link-telegram:hover {
+    opacity: 1;
+}
