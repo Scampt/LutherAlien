@@ -196,13 +196,75 @@ cursor: pointer;
     /* FOOTER */
 footer {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
 }
 
+/* FAQS */
+.faq-title {
+    text-align: center;
+    color: green;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.asks {
+    width: 500px;
+    margin: auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.contain-ask {
+    background: #fff;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.ask {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ask img {
+    width: 14px;
+}
+
+.answer {
+    color: #808080;
+    line-height: 30px;
+    max-height: 0;
+    opacity: 0;
+    transition: .3s ease all;
+}
+
+.contain-ask.actived .answer{
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.contain-ask.actived img {
+    transform: rotate(45deg);
+}
+
+/* REDES */
+
 .footer-box {
-width: 50%;
+    margin-top: 20px;
+width: 100%;
+display: flex;
+}
+
+.box-luther {
+    width: 50%;
 }
 
 .luther-nft {

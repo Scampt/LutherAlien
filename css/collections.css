@@ -7,18 +7,13 @@ body {
     background: gray;
 }
 
-.contenedor {
-    width: 1000px;
-    max-width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.container {
+        max-width: 1200px;
+        width: 90%;
+        margin: auto;
+    }
 
-}
-
-/* HEADER */
-
+/*  HEADER */
 header {
     width: 100%;
     text-align: center;
@@ -57,96 +52,148 @@ header nav .menu li a:hover{
     border-bottom: 1px solid #fff;
 }
 
-/* MAIN */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
 
-.collections {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-/* LUTHER COLECIÓN */
-.luther-box {
-    width: 100%;
-    text-align: center;
-    border-bottom: 10px solid #000;
-    margin-bottom: 30px;
-}
+    .nft-title, .nft-description {
+        color: #fff;
+    }
 
-.luther {
-    width: 100px;
-    border-radius: 100%;
+/* CAROUSEL */
+.carousel-box {
+    position: relative;
 }
 
 .luther-title {
+    text-align: center;
+    font-size: 50px;
     color: green;
     margin-bottom: 20px;
-    font-size: 20px;
 }
 
-/* NFTS */
-.nft-box {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-left: 10px;
-}
-
-.nft {
-    width: 200px;
-    border-radius: 100%;
-}
-
-.text {
-    margin-bottom: 10px;
-}
-
-.title {
-    font-size: 30px;
-}
-
-.description {
-    font-size: 16px;
-}
-
-/* BOTÓN VER MAS */
-.see-more {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
+.carousel-prev, .carousel-next {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
     border: none;
-    background: #000;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    background: none;
+    line-height: 30px;
+    text-align: center;
     color: #fff;
-    border-radius: 100px;
+    opacity: 20%;
 }
 
-.see-more-title {
-    font-size: 20px;
-    margin-bottom: 10px;
+.carousel-prev:hover, .carousel-next:hover {
+    opacity: 100%;
 }
 
-.fa-arrow-down {
-    font-size: 15px;
+.carousel-prev {
+    left: -25px;
+}
+
+.carousel-next {
+    right: -25px;
+}
+
+.carousel-list {
+    overflow: hidden;
+}
+
+.carousel-element {
+    text-align: center;
+}
+
+.carousel-indicators .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: .2;
+    border-radius: 0;
+}
+
+.carousel-indicators .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel-indicators .glider-dot.active {
+    background: #fff;
+opacity: 1;
 }
 
     /* FOOTER */
     footer {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
     }
     
+    /* FAQS */
+    .faq-title {
+        text-align: center;
+        color: green;
+        font-size: 40px;
+        margin: 20px 0;
+    }
+    
+    .asks {
+        width: 500px;
+        margin: auto;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .contain-ask {
+        background: #fff;
+        padding: 20px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: .3s ease all;
+        cursor: pointer;
+    }
+    
+    .ask {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .ask img {
+        width: 14px;
+    }
+    
+    .answer {
+        color: #808080;
+        line-height: 30px;
+        max-height: 0;
+        opacity: 0;
+        transition: .3s ease all;
+    }
+    
+    .contain-ask.actived .answer{
+        opacity: 1;
+        margin-top: 20px;
+    }
+    
+    .contain-ask.actived img {
+        transform: rotate(45deg);
+    }
+    
+    /* REDES */
+    
     .footer-box {
-    width: 50%;
+        margin-top: 20px;
+    width: 100%;
+    display: flex;
+    }
+    
+    .box-luther {
+        width: 50%;
     }
     
     .luther-nft {
@@ -164,17 +211,17 @@ main {
         text-align: center;
     }
     
-    .nosotros-title {
+    .us-title {
         font-weight: 300;
         color: #fff;
         margin-bottom: 10px;
     }
     
-    .nosotros-lista {
+    .us-list {
         list-style: none;
     }
     
-    .nosotros-lista li {
+    .us-list li {
         margin-bottom: 15px;
     }
     
@@ -185,7 +232,7 @@ main {
     
     }
     
-    .redes {
+    .social {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -210,44 +257,54 @@ main {
         opacity: 1;
     }
 
-    /* MEDIAQUIERES */
-    /* 600px */
-    @media screen and (min-width:600px) {
-        footer .luther-nft {
-            text-align: center;
-        }
-        
-        .luther-description {
-            margin-left: 50px;
-        }
+/* MEDIAQUIERIES */
+@media screen and (min-width:450px) {
+.carousel-element img {
+    border: 2px dotted #000;
+}
 
-        .luther-title {
-            font-size: 25px;
-        }
+@media screen and (min-width:800px) {
+    header {
+        display: flex;
+        align-items: center;
     }
 
-    /* 800px */
-    @media screen and (min-width:800px){
-        header {
-            padding: 50px 0;
-            display: flex;
-            margin-right: 100px;
-            align-items: center;
-        }
-
-        .link-logo {
-            margin-left: 200px;
-        }
-
-        .menu {
-            margin-right: 100px;
-        }
-
-        main .luther-title {
-            font-size: 40px;
-        }
-
-        .luther {
-            width: 200px;
-        }
+    .carousel-element {
+        margin-left: 10px;
     }
+    
+    .carousel-element img {
+        border: none;
+    }
+}
+}
+
+@media screen and (min-width:1000px) {
+    .container {
+        margin: auto;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .link-logo {
+        margin-left: 200px;
+    }
+
+    .menu {
+        margin-right: 100px;
+    }
+    
+    main .text{
+        width: 50%;
+        align-self: center;
+    }
+
+    main .title-description {
+        width: 100%;
+}
+}
