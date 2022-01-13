@@ -4,7 +4,14 @@
 }
 
 body {
-    background: gray;
+    background-image: url("../img/Luther_Patron_V1.png");
+    background-size: 320px;
+    transition: .4s ease all;
+}
+
+body.dark {
+    background-image: url("../img/Luther_Patron_V2.png");
+    background-size: 320px;
 }
 
 .container {
@@ -56,6 +63,45 @@ header nav .menu li a:hover{
     .nft-title, .nft-description {
         color: #fff;
     }
+
+    .theme-color {
+
+        background: #efefef;
+        width: 60px;
+        height: 30px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        margin-left: 20px;
+        transition: background 0.5s;
+    }
+    
+    .theme-color .circle {
+        display: block;
+        background: #9999;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        margin-left: 2px;
+        transition: background 0.5s, margin-left 0.5s;
+    }
+    
+    
+    .active .circle {
+        background: #fff;
+        margin-left: 31px;
+    }
+    
+    .dark {
+        background:#fff
+    }
+    
+    
+        .nft-title, .nft-description {
+            color: #fff;
+        }
+    
 
 /* CAROUSEL */
 .carousel-box {
@@ -125,6 +171,11 @@ opacity: 1;
     /* FOOTER */
     footer {
         width: 100%;
+        background: #000;
+    }
+
+    body.dark footer {
+        background: #fff;
     }
     
     /* FAQS */
@@ -258,10 +309,6 @@ opacity: 1;
     }
 
 /* MEDIAQUIERIES */
-@media screen and (min-width:450px) {
-.carousel-element img {
-    border: 2px dotted #000;
-}
 
 @media screen and (min-width:800px) {
     header {
@@ -277,7 +324,7 @@ opacity: 1;
         border: none;
     }
 }
-}
+
 
 @media screen and (min-width:1000px) {
     .container {
@@ -299,6 +346,10 @@ opacity: 1;
         margin-right: 100px;
     }
     
+    main {
+        height: 100vh;
+    }
+
     main .text{
         width: 50%;
         align-self: center;

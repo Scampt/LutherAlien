@@ -2,23 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    background: gray;
+    background-image: url("../img/Luther_Patron_White.png");
+    transition: .4s ease all;
 }
 
-.container {
-    width: 1000px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
+body.dark {
+    background-image: url("../img/Luther_Patron_Black.png");
 }
+
 
 /* HEADER */
 
@@ -28,17 +22,16 @@ header {
 }
 
 .link-logo {
-margin: auto;
+    margin: auto;
 }
 
 .logo {
     width: 100px;
     margin-bottom: 10px;
-    opacity: .5;
 }
 
 .logo:hover {
-    opacity: 1;
+    opacity: .7;
 }
 
 header nav .menu li {
@@ -50,14 +43,58 @@ header nav .menu li {
 header nav .menu li a {
     text-decoration: none;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: #000;
     font-family: 'Times New Roman', Times, serif;
     opacity: .7;
 }
 
+body.dark nav .menu li a {
+    color: #fff;
+}
+
+body.dark nav .menu li a:hover {
+    border-bottom: 1px solid #fff;
+}
+
 header nav .menu li a:hover{
     opacity: 1;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #000;
+}
+
+.theme-color {
+
+    background: #efefef;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background 0.5s;
+}
+
+.theme-color .circle {
+    display: block;
+    background: #9999;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background 0.5s, margin-left 0.5s;
+}
+
+.active {
+    background: green;
+}
+
+.active .circle {
+    background: #fff;
+    margin-left: 31px;
+}
+
+.dark {
+    background:#fff
 }
 
 /* MAIN */
@@ -74,18 +111,26 @@ main {
 }
 
 .title {
-    color: #fff;
+    color: #000;
     font-size: 35px;
     margin-bottom: 20px;
     text-align: center;
 }
 
+body.dark .title {
+    color: #fff;
+}
+
 .title-description {
     display: inline-block;
     width: 100%;
-    color: #cecece;
+    color: #000;
     line-height: 25px;
     text-align: center;
+}
+
+body.dark .title-description {
+    color: #fff;
 }
 
 .botons {
@@ -98,9 +143,9 @@ main {
     border-radius: 10px;
     margin-top: 20px;
     border: none;
-    color: #fff;
     font-weight: bold;
 }
+
 
 .link-boton {
     text-decoration: none;
@@ -110,18 +155,24 @@ main {
 .explore {background: #5126d2; opacity: .7;}
 .explore:hover{opacity: 1;}
 
-.sell {margin-left: 20px;background: rgba(255, 255, 255, 0.123); opacity: .7;}
+.sell {margin-left: 20px;background: #000; opacity: .7;} body.dark .sell {background: rgba(255, 255, 255, 0.452);}
 .sell:hover {opacity: 1;}
 
 .works-box {
     margin-top: 20px;
 }
 .works {
-    color: #fff;
+    color: #000;
     font-size: 25px;
     font-weight: bold;
     display: inline-block;
 }
+
+body.dark .works {
+    color: #fff;
+}
+
+
 
 .works-box, .jobs-box {
     margin-bottom: 20px;
@@ -140,7 +191,10 @@ main {
 .jobs {
     display: inline-block;
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.486);
+    color: #000;
+}
+body.dark .jobs {
+    color: #fff;
 }
 
 /* IMAGENES (NFTS PRUEBA 1) */
@@ -197,11 +251,17 @@ cursor: pointer;
 .timeline-title {
     margin-top: 30px;
     font-size: 45px;
-    color: #fff;
+    color: #000;
     border: 1px solid #000;
     text-align: center;
     border-radius: 100px;
 }
+
+body.dark .timeline-title {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
 .timeline {
     width: 80%;
     height: auto;
@@ -218,7 +278,7 @@ cursor: pointer;
 
 .timeline ul li {
     padding: 20px;
-    background-color: #fff;
+    background-color: #cecece;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -240,6 +300,15 @@ cursor: pointer;
     font-weight: 300;
 }
 
+.line-lutherbox {
+    text-align: center;
+}
+
+.luther-line {
+    width: 200px;
+    cursor: pointer;
+}
+
 .content .date {
     font-size: 13px;
     font-weight: 300;
@@ -250,6 +319,10 @@ cursor: pointer;
     /* FOOTER */
 footer {
     width: 100%;
+    background: #000;
+}
+body.dark footer {
+    background: #fff;
 }
 
 /* FAQS */
@@ -270,7 +343,7 @@ footer {
 }
 
 .contain-ask {
-    background: #fff;
+    background: #cecece;
     padding: 20px;
     border: 2px solid transparent;
     border-radius: 10px;
@@ -312,7 +385,7 @@ footer {
 /* REDES */
 
 .footer-box {
-    margin-top: 20px;
+margin-top: 20px;
 width: 100%;
 display: flex;
 }
@@ -323,12 +396,16 @@ display: flex;
 
 .luther-nft {
     font-weight: 300;
-    color: #fff;
+    color: #000;
     margin-bottom: 25px;
 }
 
+body.dark .luther-nft {
+    color: #fff;
+}
+
 .luther-description {
-    color: #cecece;
+    color: #4d4a4a;
 }
 
 .footer-box-two {
@@ -338,24 +415,38 @@ display: flex;
 
 .us-title {
     font-weight: 300;
-    color: #fff;
+    color: #000;
     margin-bottom: 10px;
+}
+
+body.dark .us-title {
+    color: #fff;
 }
 
 .us-list {
     list-style: none;
 }
 
+
 .us-list li {
     margin-bottom: 15px;
+}
+
+.us-list li a:hover {
+    border-bottom: 1px solid #000;
+}
+
+body.dark .us-list li a:hover {
+    border-bottom: 1px solid #4d4a4a;
+
 }
 
 .link-us {
     margin-bottom: 10px;
     text-decoration: none;
-    color: #cecece9a;
-
+    color: #4d4a4a;
 }
+
 
 .social {
     display: flex;
@@ -425,6 +516,10 @@ display: flex;
         top: 84px;
     }
 
+    body.dark .timeline::before {
+        background: #fff;
+    }
+
     .timeline ul {
         margin-top: 70px;
     }
@@ -456,7 +551,7 @@ display: flex;
         position: absolute;
         height: 20px;
         width: 20px;
-        background: #000;
+        background: #cecece;
         border-radius: 50%;
         top: 0;
     }
@@ -472,7 +567,7 @@ display: flex;
     }
 
     .timeline ul li:hover::after {
-        background: #fff;
+        background: #808080;
         cursor: pointer;
     }
 
@@ -509,27 +604,28 @@ display: flex;
 
 /* 1000px */
 @media screen and (min-width:1000px) {
-    .container {
-        margin: auto;
-    }
 
     header {
         width: 100%;
-        display: flex;
         align-items: center;
         padding: 50px 0;
     }
 
     .link-logo {
-        margin-left: 200px;
+        position: relative;
+        right: 150px;
     }
 
     .menu {
         margin-right: 100px;
     }
     
+    .theme-color {
+        margin-right: 200px;
+    }
+
     main .text{
-        width: 50%;
+        width: 100%;
         align-self: center;
     }
 
@@ -537,80 +633,18 @@ display: flex;
         width: 100%;
     }
 
-    .box-one {
+    .box-nfts {
+        justify-content: center;
+    }
+
+    .box-one, .box-two, .box-three, .box-four, .box-five, .box-six, .box-seven {
         width: 100%;
-        max-width: 187px;
-        height: 100%;
-        max-height: 140px;
-        border-radius: 10px;
-        position: relative;
-        display: inline-block;
-        left: 20px;
+        padding-left: 50px;
     }
-    .box-two {
-        width: 100%;
-        height: 100%;
-        max-width: 187px;
-        max-height: 108px;
-        border-radius: 10px;
-        position: relative;
-        display: inline-block;
-        right: 5px;
-        top: 30px;
+
+    .faq-title {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
-    .box-three {
-    width: 100%;
-    height: 100%;
-    max-width: 187px;
-    max-height: 220px;
-    border-radius: 10px;
-    position: relative;
-    display: inline-block;
-    left: 20px;
-    bottom: 5px;
-    }
-    .box-four{
-        width: 100%;
-        height: 100%;
-        max-width: 187px;
-        max-height: 220px;
-        border-radius: 10px;
-        position: relative;
-        display: inline-block;
-        right: 5px;
-        top: 30px;
-    }
-    .box-five{
-        width: 100%;
-        height: 100%;
-        max-width: 187px;
-        max-height: 127px;
-        border-radius: 10px;
-        position: relative;
-        display: inline-block;
-        left: 20px;
-        bottom: 10px;
-    }
-    .box-six{
-        width: 100%;
-        height: 100%;
-        max-width: 179px;
-        max-height: 159px;
-        border-radius: 10px;
-        position: relative;
-        display: inline-block;
-        right: 7px;
-        top: 30px;
-    }
-    .box-seven {
-        width: 100%;
-        height: 100%;
-        max-width: 187px;
-        max-height: 412px;
-        border-radius: 10px;
-        display: inline-block;
-        position: relative;
-        right: 40px;
-        bottom: 15px;
-    }
+    
 }
