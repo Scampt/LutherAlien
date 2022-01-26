@@ -5,12 +5,16 @@
 }
 
 body {
-    background-image: url("../img/Luther_Patron_White.png");
+    background-image: url("../img/Luther_Patron_V1.png");
+    background-size: 320px;
     transition: .4s ease all;
 }
 
 body.dark {
-    background-image: url("../img/Luther_Patron_Black.png");
+    background-image: url("../img/Luther_Patron_V2.png");
+    background-size: 320px;
+    transition: .4s ease all;
+
 }
 
 
@@ -43,7 +47,7 @@ header nav .menu li {
 header nav .menu li a {
     text-decoration: none;
     font-size: 20px;
-    color: #000;
+    color: #fff;
     font-family: 'Times New Roman', Times, serif;
     opacity: .7;
 }
@@ -84,11 +88,11 @@ header nav .menu li a:hover{
     transition: background 0.5s, margin-left 0.5s;
 }
 
-.active {
+.actived {
     background: green;
 }
 
-.active .circle {
+.actived .circle {
     background: #fff;
     margin-left: 31px;
 }
@@ -97,12 +101,56 @@ header nav .menu li a:hover{
     background:#fff
 }
 
+.burbuja {
+    opacity: .6;
+
+    position: absolute;
+    bottom: 0;
+    animation: burbujas 3s linear infinite;
+
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(30px);
+    }
+    50% {
+        opacity: .8;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+
 /* MAIN */
 main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 30px;
+    position: relative;
 }
 
 .text {
@@ -111,7 +159,8 @@ main {
 }
 
 .title {
-    color: #000;
+    margin: auto;
+    color: #fff;
     font-size: 35px;
     margin-bottom: 20px;
     text-align: center;
@@ -124,7 +173,7 @@ body.dark .title {
 .title-description {
     display: inline-block;
     width: 100%;
-    color: #000;
+    color: #fff;
     line-height: 25px;
     text-align: center;
 }
@@ -155,14 +204,14 @@ body.dark .title-description {
 .explore {background: #5126d2; opacity: .7;}
 .explore:hover{opacity: 1;}
 
-.sell {margin-left: 20px;background: #000; opacity: .7;} body.dark .sell {background: rgba(255, 255, 255, 0.452);}
+.sell {margin-left: 20px;background: #cecece79; opacity: .7;} body.dark .sell {background: #cecece79;}
 .sell:hover {opacity: 1;}
 
 .works-box {
     margin-top: 20px;
 }
 .works {
-    color: #000;
+    color: #fff;
     font-size: 25px;
     font-weight: bold;
     display: inline-block;
@@ -191,7 +240,7 @@ body.dark .works {
 .jobs {
     display: inline-block;
     font-size: 15px;
-    color: #000;
+    color: #fff;
 }
 body.dark .jobs {
     color: #fff;
@@ -218,32 +267,24 @@ body.dark .jobs {
     text-align: center;
 }
 
-.binance {
-    width: 200px;
-    opacity: .5;
+.metamask {
+    width: 35%;
 }
-.binance:hover {
-opacity: 1;
+.metamask:hover {
 cursor: pointer;
 }
 
 .ethereum {
-    width: 200px;
-    height: 150px;
-    text-align: center;
-    opacity: .5;
+    width: 35%;
 }
 .ethereum:hover {
-    opacity: 1;
     cursor: pointer;
     }
 
 .open-sea {
-    width: 200px;
-    opacity: .5;
+    width: 35%;
 }
 .open-sea:hover {
-    opacity: 1;
     cursor: pointer;
     }
 
@@ -251,8 +292,8 @@ cursor: pointer;
 .timeline-title {
     margin-top: 30px;
     font-size: 45px;
-    color: #000;
-    border: 1px solid #000;
+    color: #fff;
+    border: 1px solid #fff;
     text-align: center;
     border-radius: 100px;
 }
@@ -287,7 +328,8 @@ body.dark .timeline-title {
     margin-bottom: 0;
 }
 
-.content h3 {
+.content .luther-name {
+    text-align: center;
     font-size: 25px;
     font-weight: 500;
     line-height: 30px;
@@ -295,9 +337,9 @@ body.dark .timeline-title {
 }
 
 .content p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 30px;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .line-lutherbox {
@@ -305,7 +347,7 @@ body.dark .timeline-title {
 }
 
 .luther-line {
-    width: 200px;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -396,7 +438,7 @@ display: flex;
 
 .luther-nft {
     font-weight: 300;
-    color: #000;
+    color: #fff;
     margin-bottom: 25px;
 }
 
@@ -415,7 +457,7 @@ body.dark .luther-nft {
 
 .us-title {
     font-weight: 300;
-    color: #000;
+    color: #fff;
     margin-bottom: 10px;
 }
 
@@ -433,7 +475,7 @@ body.dark .us-title {
 }
 
 .us-list li a:hover {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
 }
 
 body.dark .us-list li a:hover {
@@ -475,12 +517,6 @@ body.dark .us-list li a:hover {
 
 /* MEDIAQUERIES */
 
-/* 403px */
-@media screen  and (min-width:403px){
-    .binance, .ethereum, .open-sea {
-        width: 300px;
-    }
-}
 
 /* 600px */
 @media screen and (min-width:600px) {
@@ -499,8 +535,9 @@ body.dark .us-list li a:hover {
         width: 100%;
     }
 
-    .binance, .ethereum, .open-sea {
-        width: 400px;
+    .metamask, .ethereum, .open-sea {
+        width: 20%;
+        margin-left: 25px;
     }
 
 
@@ -510,7 +547,7 @@ body.dark .us-list li a:hover {
         position: absolute;
         height: 100%;
         width: 1px;
-        background: #000;
+        background: #fff;
         transform: translateX(-50%);
         left: 50%;
         top: 84px;
@@ -572,6 +609,7 @@ body.dark .us-list li a:hover {
     }
 
     .content .date {
+        color: #fff;
         position: absolute;
         top: -30px;
     }
@@ -595,10 +633,6 @@ body.dark .us-list li a:hover {
     main .box-nfts {
         width: 50%;
         margin: auto;
-    }
-
-    .binance, .ethereum, .open-sea {
-        width: 500px;
     }
 }
 
@@ -637,6 +671,11 @@ body.dark .us-list li a:hover {
         justify-content: center;
     }
 
+    .metamask, .ethereum, .open-sea {
+        width: 15%;
+        margin-left: 50px;
+    }
+    
     .box-one, .box-two, .box-three, .box-four, .box-five, .box-six, .box-seven {
         width: 100%;
         padding-left: 50px;

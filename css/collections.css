@@ -12,6 +12,7 @@ body {
 body.dark {
     background-image: url("../img/Luther_Patron_V2.png");
     background-size: 320px;
+    transition: .4s ease all;
 }
 
 .container {
@@ -87,8 +88,11 @@ header nav .menu li a:hover{
         transition: background 0.5s, margin-left 0.5s;
     }
     
+    .actived {
+        background: green;
+    }
     
-    .active .circle {
+    .actived .circle {
         background: #fff;
         margin-left: 31px;
     }
@@ -104,6 +108,10 @@ header nav .menu li a:hover{
     
 
 /* CAROUSEL */
+main {
+    width: 100%;
+}
+
 .carousel-box {
     position: relative;
 }
@@ -111,7 +119,7 @@ header nav .menu li a:hover{
 .luther-title {
     text-align: center;
     font-size: 50px;
-    color: green;
+    color: rgb(243, 243, 243);
     margin-bottom: 20px;
 }
 
@@ -138,8 +146,16 @@ header nav .menu li a:hover{
     left: -25px;
 }
 
+.fa-chevron-left {
+font-size: 50px;
+}
+
 .carousel-next {
     right: -25px;
+}
+
+.fa-chevron-right {
+font-size: 50px;
 }
 
 .carousel-list {
@@ -167,6 +183,10 @@ header nav .menu li a:hover{
     background: #fff;
 opacity: 1;
 }
+/* 
+.see-more-box {
+    display: flex;
+} */
 
     /* FOOTER */
     footer {
@@ -323,6 +343,11 @@ opacity: 1;
     .carousel-element img {
         border: none;
     }
+
+    .fa-chevron-left, .fa-chevron-right {
+        font-size: 30px;
+    }
+
 }
 
 
@@ -357,5 +382,9 @@ opacity: 1;
 
     main .title-description {
         width: 100%;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    font-size: 30px;
 }
 }

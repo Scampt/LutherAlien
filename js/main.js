@@ -4,5 +4,5 @@ boton.addEventListener("click", colorChange)
 function colorChange() 
 {
     document.body.classList.toggle("dark")
-    boton.classList.toggle("active");
+    boton.classList.toggle("actived");
 }
