@@ -62,7 +62,13 @@ header nav .menu li a:hover{
 
 
     .nft-title, .nft-description {
-        color: #fff;
+        text-decoration: none;
+        background:#3e3e3e;
+        padding: 20px;
+    }
+
+    .nft-title:hover {
+        border-bottom: 2px solid #fff;
     }
 
     .theme-color {

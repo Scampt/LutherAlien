@@ -7,15 +7,39 @@
 body {
     background-image: url("../img/Luther_Patron_V1.png");
     background-size: 320px;
-    transition: .4s ease all;
+    transition: .4s ease-in-out all;
+
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
 }
 
-body.dark {
+@keyframes animate {
+    0% {
+        background-image: url("../img/Luther_Patron_V1.png");
+    }
+    40% {
+        background-image: url("../img/Luther_Patron_V1.png");
+    }
+    80% {
+        background-image: url("../img/Luther_Patron_V2.png");
+    }
+    100% {
+        background-image: url("../img/Luther_Patron_V2.png");
+    }
+}
+
+/* body.dark {
     background-image: url("../img/Luther_Patron_V2.png");
     background-size: 320px;
     transition: .4s ease all;
 
-}
+} */
 
 
 /* HEADER */
@@ -103,27 +127,80 @@ header nav .menu li a:hover{
 
 .burbuja {
     opacity: .6;
-
     position: absolute;
-    bottom: 0;
+    bottom: -150;
     animation: burbujas 3s linear infinite;
 
 }
 
-.burbuja:nth-child(1) {
-    width: 80px;
-    height: 80px;
+.burbuja:nth-child(1){
+    width: 8%;
+    height: 8%;
     left: 5%;
     animation-duration: 3s;
-    animation-delay: 3s;
 }
 
-.burbuja:nth-child(2) {
-    width: 100px;
-    height: 100px;
+.burbuja:nth-child(2){
+    width: 10%;
+    height: 10%;
     left: 35%;
     animation-duration: 3s;
-    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 2%;
+    height: 2%;
+    left: 15%;
+    animation-duration: 1.5s;
+}
+
+.burbuja:nth-child(4){
+    width: 5%;
+    height: 5%;
+    left: 90%;
+    animation-duration: 6s;
+}
+
+.burbuja:nth-child(5){
+    width: 7%;
+    height: 7%;
+    left: 65%;
+    animation-duration: 3s;
+}
+
+.burbuja:nth-child(6){
+    width: 2%;
+    height: 2%;
+    left: 50%;
+    animation-duration: 4s;
+}
+
+.burbuja:nth-child(7){
+    width: 2%;
+    height: 2%;
+    left: 50%;
+    animation-duration: 4s;
+}
+
+.burbuja:nth-child(8){
+    width: 10%;
+    height: 10%;
+    left: 52%;
+    animation-duration: 5s;
+}
+
+.burbuja:nth-child(9){
+    width: 6.5%;
+    height: 6.5%;
+    left: 51%;
+    animation-duration: 3s;
+}
+
+.burbuja:nth-child(10){
+    width: 4%;
+    height: 4%;
+    left: 35%;
+    animation-duration: 3s;
 }
 
 @keyframes burbujas {
@@ -132,7 +209,7 @@ header nav .menu li a:hover{
         opacity: 0;
     }
     30% {
-        transform: translateX(30px);
+        transform: translateX(50px);
     }
     50% {
         opacity: .8;
@@ -147,10 +224,10 @@ header nav .menu li a:hover{
 /* MAIN */
 main {
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 30px;
-    position: relative;
 }
 
 .text {
@@ -166,9 +243,6 @@ main {
     text-align: center;
 }
 
-body.dark .title {
-    color: #fff;
-}
 
 .title-description {
     display: inline-block;
@@ -201,7 +275,7 @@ body.dark .title-description {
     color: #fff;
 }
 
-.explore {background: #5126d2; opacity: .7;}
+.explore {background: #2181e3; opacity: .7;}
 .explore:hover{opacity: 1;}
 
 .sell {margin-left: 20px;background: #cecece79; opacity: .7;} body.dark .sell {background: #cecece79;}
@@ -663,9 +737,29 @@ body.dark .us-list li a:hover {
         align-self: center;
     }
 
-    main .title-description {
-        width: 100%;
+    /* main .title {
+        width: 70%;
+        background: green;
+        margin:auto
     }
+
+    main .title-description {
+        width: 60%;
+        background: red;
+        margin:auto
+    }
+
+    main .botons {
+        width: 20%;
+        background: red;
+        margin: auto;
+    }
+
+    .works-box, .jobs-box {
+        width: 30%;
+        margin: auto;
+        background: red;
+    } */
 
     .box-nfts {
         justify-content: center;
