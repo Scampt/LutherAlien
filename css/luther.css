@@ -203,19 +203,19 @@ main {
     width: 150px;
 }
 
-.nft-box {
+.nft-gif {
     width: 100%;
+    height: 250px;
     position: relative;
     top: 50px;
-    text-align: center;
-}
 
-.luther-gif {
-    width: 320px;
+    background-image: url("../img/luthers.gif");
+    background-size: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .blockchain {
-    display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -229,7 +229,7 @@ main {
 
 .opensea, .ethereum, .metamask {
     width: 20%;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .timeline {
@@ -259,14 +259,16 @@ main {
 
 .ufo-box {
     width: 100%;
-    margin: auto;
-    position: relative;
     height: 350px;
+    margin-top: 0;
+    display: inline-block;
+    position: relative;
+
+
     background-image: url("../img/ovni_Green_o.png");
     background-repeat: no-repeat;
-    background-position: fixed;
     background-position: center;
-    background-size: 280px;
+    background-size: 300px;
 
     animation: animateufo;
     animation-direction: alternate;
@@ -289,8 +291,6 @@ main {
 
 .timeline ul {
     list-style: none;
-    margin-top: 30px;
-    
 }
 
 .timeline ul li {
@@ -336,136 +336,12 @@ main {
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
-/* MEDIAQUIERE PARA 600px */
-@media screen and (min-width:600px) {
-    header .nav-item {
-        font-size: 20px;
-    }
 
-    main .title {
-        font-size: 30px;
-    }
-
-    main .title-description {
-        font-size: 22px;
-    }
-
-    main .works {
-        font-size: 16px;
-    }
-    main .jobs {
-        font-size: 16px;
-    }
-
-    main .buy {
-        width: 200px;
-        padding: 15px;
-        border-radius: 30px;
-        border: none;
-        background: rgb(15, 156, 221);
-        position: relative;
-        top: 30px;
-    }
-    main .buy-link {
-        font-size: 20px;
-    }
-
-    main .luther-gif {
-        width: 70%;
-    }
-
-    .ufo-box {
-        width: 100%;
-        margin-top: 20px;
-    }
-    
-    .timeline {
-        width: 80%;
-        height: auto;
-        max-width: 800px;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .timeline::before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 10px;
-        border-radius: 4px;
-        background: rgb(255, 255, 255);
-        transform: translateX(-50%);
-        left: 50%;
-        top: 7%;
-    }
-
-    .timeline ul {
-        margin-top: 70px;
-    }
-
-    .timeline ul li {
-        width: 50%;
-        margin-bottom: 50px;
-        position: relative;
-    }
-    
-
-    .timeline ul li:nth-child(odd) {
-        float: left;
-        clear: right;
-        transform: translateX(-30px);
-        border-radius: 20px 0px 20px 20px;
-    }
-
-    .timeline ul li:nth-child(even) {
-        float: right;
-        clear: left;
-        transform: translateX(30px);
-        border-radius: 0px 20px 20px 20px;
-    }
-
-    
-    .timeline ul li:after {
-        content: "";
-        position: absolute;
-        height: 20px;
-        width: 20px;
-        background: #cecece;
-        border-radius: 50%;
-        top: 0;
-    }
-
-    .timeline ul li:nth-child(odd)::after {
-        transform: translate(50%, -50%);
-        right: -30px;
-    }
-
-    .timeline ul li:nth-child(even)::after {
-        transform: translate(-50%, -50%);
-        left: -30px;
-    }
-    .timeline ul li:hover::after {
-        background: rgb(0, 226, 0);
-        cursor: pointer;
-    }
-
-
-    .content .date {
-        color: #fff;
-        position: absolute;
-        top: -30px;
-    }
-
-    .opensea, .ethereum, .metamask {
-        width: 20%;
-        margin-left: 20px;
-    }
-}
 /* ESTILOS PARA EL FOOTER */
 footer {
     width: 100%;
     position: relative;
-    top: 90px;
+    margin-top: 120px;
     background: #000;
 }
 
@@ -570,11 +446,153 @@ footer {
     opacity: 1;
 }
 
-/* MEDIAQUIERE PARA 600px */
+/* MEDIAQUIERE PARA 600PX */
 @media screen and (min-width:600px) {
     header .nav-item {
         font-size: 20px;
-    }    
+    }
+
+    main .ufo-box {
+        height: 400px;
+        margin: 0;
+        background-size: 350px;
+    }
+
+    main .title {
+        font-size: 30px;
+    }
+
+    main .title-description {
+        font-size: 22px;
+    }
+
+    main .works {
+        font-size: 16px;
+    }
+    main .jobs {
+        font-size: 16px;
+    }
+
+    main .buy {
+        width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        border: none;
+        background: rgb(15, 156, 221);
+        position: relative;
+        top: 30px;
+    }
+    main .buy-link {
+        font-size: 20px;
+    }
+
+    main .nft-gif {
+        height: 350px;
+
+        background-size: 350px;
+    }
+
+    .ufo-box {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .timeline {
+        width: 80%;
+        height: auto;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 10px;
+        border-radius: 4px;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 7%;
+
+        animation-name: animateline;    
+        animation-direction: alternate;
+        animation-duration: 2s;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes animateline {
+        0% {
+            background-color: rgba(193,255,1,255);
+        }
+        100% {
+            background-color: rgba(0,247,254,255);
+        }
+    }
+
+    .timeline ul {
+        margin-top: 70px;
+    }
+
+    .timeline ul li {
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+
+    
+    .timeline ul li:after {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: rgba(216,1,254,255);
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .timeline ul li:nth-child(odd)::after {
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+
+    .timeline ul li:nth-child(even)::after {
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+    .timeline ul li:hover::after {
+        background-color: rgba(254,255,254,255);
+        cursor: pointer;
+    }
+
+    .content .date {
+        color: #fff;
+        position: absolute;
+        top: -30px;
+    }
+
+    .opensea, .ethereum, .metamask {
+        width: 20%;
+        margin-left: 20px;
+    }
 }
 
 /* MEDIAQUIERES 700PX */
@@ -582,6 +600,18 @@ footer {
     header .logo {
         width: 100%;
     }
+
+    main .nft-gif {
+        height: 450px;
+
+        background-size: 450px;
+    }
+    
+    main .ufo-box {
+        height: 500px;
+        background-size: 450px;
+    }
+    
 
     main .title {
         font-size: 50px;
@@ -596,7 +626,7 @@ footer {
     }
 }
 
-/* MEDIAQUIERES 1000PX */
+/* MEDIAQUIERES PARA 1000PX */
 @media screen and (min-width:1000px) {
     header  .nav-container{
         width: 100%;
@@ -622,6 +652,11 @@ footer {
         width: 93px;
     }
 
+    main .ufo-box {
+        height: 550px;
+        background-size: 500px;
+    }
+
     main .title  {
         font-size: 100px;
     }
@@ -636,6 +671,12 @@ footer {
 
     main .jobs {
         font-size: 26px;
+    }
+
+    main .nft-gif {
+        height: 518px;
+
+        background-size: 450px;
     }
 
     main .luther-gif {

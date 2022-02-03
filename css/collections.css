@@ -24,20 +24,20 @@ body {
 
 }
 
+@keyframes animate {
+    0% {
+        background-image: url("../img/Luther_Patron_V1.png");
+    }
+    100% {
+        background-image: url("../img/Luther_Patron_V2.png");
+    }
+}
+
 .container {
-        max-width: 1200px;
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
 
-    @keyframes animate {
-        0% {
-            background-image: url("../img/Luther_Patron_V1.png");
-        }
-        100% {
-            background-image: url("../img/Luther_Patron_V2.png");
-        }
-    }
     
      /* ESTILOS PARA EL HEADER */
     header .link-logo {
@@ -141,7 +141,7 @@ body {
     }
 }
 
-/* CAROUSEL */
+/* ESTILOS PARA EL MAIN*/
 main {
     width: 100%;
 }
@@ -214,11 +214,13 @@ main {
 .contenedor-pregunta.activa .fa-plus {
     transform: rotate(45deg);
 }
+
+/* ESTILOS PARA EL CAROUSEL */
 .carousel {
     position: relative;
 }
 
-.nft-title, .nft-description {
+.nft-title {
     color: #fff;
 }
 
@@ -299,6 +301,8 @@ opacity: 1;
 /* ESTILOS PARA EL FOOTER */
 footer {
     width: 100%;
+    position: relative;
+    top: 90px;
     background: #000;
 }
 
@@ -345,7 +349,7 @@ footer {
 }
 
 .answer {
-    color: #808080;
+    color: #000;
     line-height: 30px;
     max-height: 0;
     opacity: 0;
@@ -403,34 +407,12 @@ footer {
     opacity: 1;
 }
 
-/* MEDIAQUIERIES */
-
-@media screen and (min-width:800px) {
-    header {
-        display: flex;
-        align-items: center;
-    }
-
-    .carousel-element {
-        margin-left: 10px;
-    }
-    
-    .carousel-element img {
-        border: none;
-    }
-
-    .fa-chevron-left, .fa-chevron-right {
-        font-size: 30px;
-    }
-
-}
-
-/* MEDIAQUIERE PARA 600px */
+/* MEDIAQUIERIES PARA 600PX */
 @media screen and (min-width:600px) {
     header .nav-item {
         font-size: 20px;
     }
-
+    
     main .title {
         font-size: 30px;
     }
@@ -462,59 +444,68 @@ footer {
     }
 }
 
-/* MEDIAQUIERE PARA 600px */
-@media screen and (min-width:600px) {
-    header .nav-item {
-        font-size: 20px;
-    }    
+/* MEDIAQUIERES PARA 450PX (solo el carousel)*/
+@media screen and (min-width:450px) {
+    main .carousel-element {
+        margin-right: 10px;
+    }
 }
 
-/* MEDIAQUIERES 700PX */
+/* MEDIAQUIERES PARA 700PX */
 @media screen and (min-width:700px) {
     header .logo {
         width: 100%;
     }
-
     main .luther-title {
         font-size: 50px;
     }
 }
 
+/* MEDIAQUIERES PARA 800PX */
+@media screen and (min-width:800px) {
+
+    main .carousel-element {
+        margin-left: 10px;
+    }
+    
+    main .carousel-element img {
+        border: none;
+    }
+
+    main .fa-chevron-left, .fa-chevron-right {
+        font-size: 30px;
+    }
+
+}
+
+/* MEDIAQUIERES PARA 1000PX */
 @media screen and (min-width:1000px) {
     .container {
         margin: auto;
     }
-    header {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 50px 0;
-    }
 
-    header .nav-container {
+    header  .nav-container{
         width: 100%;
         align-items: center;
         display: flex;
     }
 
     header  .logo {
-        width: 100%
+        width: 150px;
+        position: relative;
+        right: 30%;
+    }
+
+    header .nav-menu {
+        margin-right: 50px;
     }
 
     header .nav-item {
         font-size: 30px;
     }
 
-    .link-logo {
-        margin-left: 200px;
-    }
-
-    .link-logo {
-        margin-left: 200px;
-    }
-    
-    main {
-        height: 100vh;
+    header .link-logo {
+        width: 93px;
     }
 
     main .text{
@@ -532,6 +523,5 @@ footer {
 
 footer {
     position: relative;
-    top: 300px;
 }
 }
