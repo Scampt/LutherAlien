@@ -1,9 +1,4 @@
 /* ESTILOS PRINCIPALES */
-@font-face {
-    font-family: "Bukhari Script";
-    src: url("../fonts/Bukhari\ Script.ttf");
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -21,91 +16,89 @@ body {
     animation-iteration-count: infinite;
     animation-play-state: running;
     animation-timing-function: ease-in-out;
-
 }
 
 .container {
-        max-width: 1200px;
-        width: 90%;
-        margin: auto;
-    }
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
 
-    @keyframes animate {
-        0% {
-            background-image: url("../img/Luther_Patron_V1.png");
-        }
-        100% {
-            background-image: url("../img/Luther_Patron_V2.png");
-        }
+@keyframes animate {
+    0% {
+        background-image: url("../img/Luther_Patron_V1.png");
     }
-    
-     /* ESTILOS PARA EL HEADER */
-    header .link-logo {
-        width: 20%;
-        position: relative;
-        right: 16%;
-        margin: auto;
-        text-decoration: none;
-        color: none;
+    100% {
+        background-image: url("../img/Luther_Patron_V2.png");
     }
-    
-    header .logo {
-        width: 150%;
-    }
-    
-    .logo:hover {
-        opacity: .8;
-    }
-    
-    
-    header .fa-bars {
-        font-size: 30px;
-    }
-    
-    header .nav-container {
-        display: flex;
-        height: 100%;
-        width: 90%;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .nav-menu {
-        display: grid;
-        grid-auto-flow: column;
-        gap: 3em;
-    }
-    
-    .nav-item::after {
-        content: "";
-        display: block;
-        background: #fff;
-        width: 90%;
-        margin-top: 3px;
-        height: 3px;
-        clip-path: var(--clippy);
-        transition: clip-path .5s;
-    
-    }
-    
-    .nav-item {
-        color: #fff;
-        text-decoration: none;
-        --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    }
-    
-    .nav-item:hover {
-        --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-    
-    .nav-label, .nav-input {
-        display: none;
-    }
-    
-    header nav {
-        color: #fff;
-    }
+}
+
+/* ESTILOS PARA EL HEADER */
+header .link-logo {
+    width: 20%;
+    margin: auto;
+    text-decoration: none;
+    color: none;
+}
+
+header .logo {
+    position: relative;
+    width:100%;
+}
+
+.logo:hover {
+    opacity: .8;
+}
+
+
+header .fa-bars {
+    font-size: 30px;
+}
+
+header .nav-container {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.nav-item::after {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav-item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav-label, .nav-input {
+    display: none;
+}
+
+header nav {
+    color: #fff;
+}
 
 /* MEDIAQUERIE PARA EL NAV  MAX-WIDTH 600px */
 @media (max-width:600px) {
@@ -146,6 +139,14 @@ main {
     width: 100%;
 }
 
+
+
+
+
+
+
+
+/* --------------LUTHER-------------- */
 .luther-life {
     display: flex;
     justify-content: center;
@@ -163,7 +164,7 @@ main {
 }
 
 .preguntas {
-    width: 100%;
+    width: 60%;
     margin: auto;
     max-width: 100%;
     display: grid;
@@ -214,6 +215,20 @@ main {
 .contenedor-pregunta.activa .fa-plus {
     transform: rotate(45deg);
 }
+/* --------------LUTHER-------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
 .carousel {
     position: relative;
 }
@@ -227,8 +242,6 @@ main {
 }
 
 .luther-title {
-    font-family: "Bukhari Script";
-
     text-align: center;
     font-size: 50px;
     color: rgb(243, 243, 243);
@@ -241,7 +254,7 @@ main {
     width: 30px;
     height: 30px;
     border: none;
-    top: calc(50% - 30px);
+    top: calc(50% - 35px);
     cursor: pointer;
     background: none;
     line-height: 30px;
@@ -255,7 +268,7 @@ main {
 }
 
 .carousel-prev {
-    left: -20px;
+    left: -10px;
 }
 
 .fa-chevron-left {
@@ -263,7 +276,7 @@ font-size: 50px;
 }
 
 .carousel-next {
-    right: -20px;
+    right: -10px;
 }
 
 .fa-chevron-right {
@@ -401,28 +414,6 @@ footer {
     opacity: 1;
 }
 
-/* MEDIAQUIERIES */
-
-@media screen and (min-width:800px) {
-    header {
-        display: flex;
-        align-items: center;
-    }
-
-    .carousel-element {
-        margin-left: 10px;
-    }
-    
-    .carousel-element img {
-        border: none;
-    }
-
-    .fa-chevron-left, .fa-chevron-right {
-        font-size: 30px;
-    }
-
-}
-
 /* MEDIAQUIERE PARA 600px */
 @media screen and (min-width:600px) {
     header .nav-item {
@@ -460,76 +451,25 @@ footer {
     }
 }
 
-/* MEDIAQUIERE PARA 600px */
-@media screen and (min-width:600px) {
-    header .nav-item {
-        font-size: 20px;
-    }    
-}
-
 /* MEDIAQUIERES 700PX */
 @media screen and (min-width:700px) {
-    header .logo {
-        width: 100%;
-    }
-
     main .luther-title {
         font-size: 50px;
     }
 }
 
+/* MEDIAQUIERES 1000PX */
 @media screen and (min-width:1000px) {
-    .container {
-        margin: auto;
-    }
-    header {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 50px 0;
-    }
-
-    header .nav-container {
-        width: 100%;
-        align-items: center;
-        display: flex;
-    }
-
     header  .logo {
-        width: 100%
+        width: 100%;
     }
 
     header .nav-item {
         font-size: 30px;
     }
 
-    .link-logo {
-        margin-left: 200px;
+    footer {
+        position: relative;
+        top: 500px;
     }
-
-    .link-logo {
-        margin-left: 200px;
-    }
-    
-    main {
-        height: 100vh;
-    }
-
-    main .text{
-        width: 50%;
-        align-self: center;
-    }
-
-    main .title-description {
-        width: 100%;
-}
-
-.fa-chevron-left, .fa-chevron-right {
-    font-size: 30px;
-}
-
-footer {
-    position: relative;
-    top: 300px;
-}
 }
