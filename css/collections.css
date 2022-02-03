@@ -255,19 +255,19 @@ main {
 }
 
 .carousel-prev {
-    left: -20px;
+    left: -25px;
 }
 
 .fa-chevron-left {
-font-size: 50px;
+font-size: 35px;
 }
 
 .carousel-next {
-    right: -20px;
+    right: -25px;
 }
 
 .fa-chevron-right {
-font-size: 50px;
+font-size: 35px;
 }
 
 .carousel-list {
@@ -304,6 +304,8 @@ footer {
 
 /* FAQS */
 .faq-title {
+    font-family: "Bukhari Script";
+
     text-align: center;
     color: green;
     font-size: 40px;

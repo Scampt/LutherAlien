@@ -258,16 +258,32 @@ main {
 }
 
 .ufo-box {
-    text-align: center;
-    margin-top: 20px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    height: 350px;
+    background-image: url("../img/ovni_Green_o.png");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-position: center;
+    background-size: 280px;
+
+    animation: animateufo;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
 }
 
-.ufo {
-    width: 50%;
-}
-
-.ufo-light {
-    display: none;
+@keyframes animateufo {
+    0% {
+        background-image: url("../img/ovni_Green_o.png");
+    }
+    100% {
+        background-image: url("../img/ovni_Blue_o.png");
+    }
 }
 
 
@@ -361,24 +377,6 @@ main {
     .ufo-box {
         width: 100%;
         margin-top: 20px;
-        text-align: center;
-        margin-bottom: 500px;
-        position: relative;
-    }
-    
-    .ufo {
-        width: 60%;
-        position: relative;
-        right: 17%;
-    }
-    
-    .ufo-light {
-        width: 41%;
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 19%;
-        transform: skew(-25deg, 18deg);
     }
     
     .timeline {
@@ -386,7 +384,6 @@ main {
         height: auto;
         max-width: 800px;
         margin: 0 auto;
-        margin-bottom: 100px;
         position: relative;
     }
 
@@ -474,6 +471,8 @@ footer {
 
 /* FAQS */
 .faq-title {
+    font-family: "Bukhari Script";
+
     text-align: center;
     color: green;
     font-size: 40px;
@@ -513,7 +512,7 @@ footer {
 }
 
 .answer {
-    color: #808080;
+    color: #000;
     line-height: 30px;
     max-height: 0;
     opacity: 0;
