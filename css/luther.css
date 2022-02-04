@@ -155,7 +155,6 @@ main {
 
 .title {
     font-family: "Bukhari Script";
-
     font-size: 35px;
     margin-bottom: 20px;
 }
@@ -163,7 +162,8 @@ main {
 .title-description {
     width: 60%;
     margin: auto;
-    font-weight: lighter;
+    font-family: "Montserrat";
+    font-weight: 400;
     font-size: 13px;
     margin-bottom: 30px;
 }
@@ -178,10 +178,14 @@ main {
 .works {
     margin-left: 20px;
     font-size: 13px;
+    font-family: "Montserrat";
+    font-weight: 400;
 }
 
 .jobs{
     font-size: 13px;
+    font-family: "Montserrat";
+    font-weight: 400;
 }
 
 .buy-btn {
@@ -404,46 +408,70 @@ footer {
     transform: rotate(45deg);
 }
 
-/* REDES */
-.social {
+/* FOOTER 2 */
+.footer-two {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    margin-top: 20px;
     align-items: center;
 }
 
-.link-twitter {
-    color: #1da1f2;
-    font-size: 50px;
-    margin-right: 200px;
+/* REDES */
+.social {
+    width: 50%;
+    text-align: center;
+}
+
+.social-title {
+    color: #fff;
+    font-family: "Bukhari Script";
     margin-bottom: 10px;
 }
 
-.link-instagram {
-    color: #833ab4;
-    font-size: 50px;
+.social ul li {
+    list-style: none;
     margin-bottom: 10px;
 }
 
-.link-discord {
-    color: #7289da;
-    font-size: 50px;
-    margin-right: 200px;
+.link {
+    flex-direction: column;
+    width: 100px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.twitter {
     margin-top: 10px;
 }
 
-.link-telegram {
-    color: #0088cc;
-    font-size: 50px;
-    margin-top: 10px;
+.link:hover {
+    border-bottom: 1px solid #fff;
 }
 
-.link-discord:hover {
-    opacity: 1;
+.luther-footer {
+    display: none;
 }
 
-.link-telegram:hover {
-    opacity: 1;
+/* AYUDA */
+.help {
+    width: 50%;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.help-title {
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: "Bukhari Script";
+}
+
+.help ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.help-link:hover {
+    border-bottom: 1px solid #fff;
 }
 
 /* MEDIAQUIERE PARA 600PX */
@@ -691,4 +719,51 @@ footer {
     main .metamask, .ethereum, .opensea {
         width: 10%;
     }
+
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-one {
+        width: 50%;
+    }
+
+    .social-title {
+        font-size: 30px;
+    }
+
+    footer .faq-title {
+        width: 100%;
+        margin-right: 5px;
+    }
+
+    .footer-luther {
+        margin-right: 50px;
+    }
+
+    .asks {
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
+    .luther-footer {
+        display: inline-block;
+        width: 250px;
+    }
+
+    footer .footer-two {
+        width: 50%;
+        margin: 0;
+    }
+
+    .help-title {
+        font-size: 30px;
+    }
+
+    footer .help {
+        margin-bottom: 40px;
+    }
+
 }
