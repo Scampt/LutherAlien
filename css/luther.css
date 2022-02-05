@@ -193,17 +193,25 @@ main {
     border: none;
     border-radius: 30px;
     position: relative;
+    padding: 10px;
     top: 30px;
+}
+
+.buy-btn:hover {
+    opacity: .8;
+}
+
+.buy-link:hover {
+    text-decoration: underline;
 }
 
 .buy-link {
     font-family: "Bukhari Script";
 
-    text-decoration: none;
+    text-decoration: transparent;
     font-size: 18px;
-    display: block;
     color: #fff;
-    padding: 10px;
+    display: block;
     width: 150px;
 }
 
@@ -354,7 +362,7 @@ footer {
     font-family: "Bukhari Script";
 
     text-align: center;
-    color: green;
+    color: #fff;
     font-size: 40px;
     margin: 20px 0;
 }
@@ -450,6 +458,10 @@ footer {
 
 .luther-footer {
     display: none;
+}
+
+.luther-link-footer {
+    text-decoration: none;
 }
 
 /* AYUDA */
@@ -592,9 +604,25 @@ footer {
         position: absolute;
         height: 20px;
         width: 20px;
-        background-color: rgba(216,1,254,255);
         border-radius: 50%;
         top: 0;
+        
+            animation-name: animatedot;
+            animation-direction: alternate;
+            animation-duration: 2s;
+            animation-fill-mode: backwards;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+    }
+
+    @keyframes animatedot {
+        0% {
+            background-color: rgba(193,255,1,255);
+        }
+        100% {
+            background-color: rgba(0,247,254,255);
+        }
     }
 
     .timeline ul li:nth-child(odd)::after {
@@ -607,8 +635,10 @@ footer {
         left: -30px;
     }
     .timeline ul li:hover::after {
-        background-color: rgba(254,255,254,255);
         cursor: pointer;
+        background-color:#fff;
+
+        animation-name: none;
     }
 
     .content .date {
@@ -751,6 +781,10 @@ footer {
     .luther-footer {
         display: inline-block;
         width: 250px;
+    }
+
+    .luther-footer:hover {
+        opacity: .7;
     }
 
     footer .footer-two {

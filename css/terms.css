@@ -33,13 +33,7 @@ body {
     }
 }
 
-.container {
-        width: 80%;
-        margin: auto;
-    }
-
-    
-     /* ESTILOS PARA EL HEADER */
+    /* ESTILOS PARA EL HEADER */
     header .link-logo {
         width: 20%;
         position: relative;
@@ -141,168 +135,43 @@ body {
     }
 }
 
-/* ESTILOS PARA EL MAIN*/
+/* ESTILOS PARA EL MAIN */
 main {
     width: 100%;
-}
-
-.luther-life {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: column;
 }
 
-.luther-main-box {
-    width: 100%;
-    display: flex;
-}
-
-.luther-main {
-    width: 50%;
+.box-terms {
+    width: 80%;
     margin: auto;
-}
-
-.preguntas {
-    width: 100%;
-    margin: auto;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-.contenedor-pregunta {
     background: rgb(0, 0, 0, .7);
     padding: 20px;
     border: 2px solid transparent;
     border-radius: 10px;
     overflow: hidden;
     transition: .3s ease all;
-    cursor: pointer;
 }
 
-.pregunta .fa-plus {
-    color: #fff;
-    width: 14px;
-}
-
-.pregunta {
+.terms-title {
     color: #fff;
     font-size: 30px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: 30px;
 }
 
-.respuesta {
+.terms {
+    color: #fff;
     text-align: justify;
     line-height: 25px;
     letter-spacing: 2px;
-    color: darkgray;
-    max-height: 0;
-    opacity: 0;
-    transition: .3s ease all;
+    margin-bottom: 50px;
 }
 
-.contenedor-pregunta.activa .respuesta {
-    opacity: 1;
-    margin-top: 20px;
-}
-
-.contenedor-pregunta.activa .fa-plus {
-    transform: rotate(45deg);
-}
-
-/* ESTILOS PARA EL CAROUSEL */
-.carousel {
-    position: relative;
-}
-
-.nft-title {
-    color: #fff;
-}
-
-.carousel-box {
-    position: relative;
-}
-
-.luther-title {
-    font-family: "Bukhari Script";
-
-    text-align: center;
-    font-size: 50px;
-    color: rgb(243, 243, 243);
-    margin-bottom: 20px;
-}
-
-.carousel-prev, .carousel-next {
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 30px;
-    border: none;
-    top: calc(50% - 30px);
-    cursor: pointer;
-    background: none;
-    line-height: 30px;
-    text-align: center;
-    color: #fff;
-    opacity: 20%;
-}
-
-.carousel-prev:hover, .carousel-next:hover {
-    opacity: 100%;
-}
-
-.carousel-prev {
-    left: -25px;
-}
-
-.fa-chevron-left {
-font-size: 35px;
-}
-
-.carousel-next {
-    right: -25px;
-}
-
-.fa-chevron-right {
-font-size: 35px;
-}
-
-.carousel-list {
-    overflow: hidden;
-}
-
-.carousel-element {
-    text-align: center;
-}
-
-.carousel-indicators .glider-dot {
-    display: block;
-    width: 30px;
-    height: 4px;
-    background: #fff;
-    opacity: .2;
-    border-radius: 0;
-}
-
-.carousel-indicators .glider-dot:hover {
-    opacity: .5;
-}
-
-.carousel-indicators .glider-dot.active {
-    background: #fff;
-opacity: 1;
-}
 
 /* ESTILOS PARA EL FOOTER */
 footer {
     width: 100%;
-    position: relative;
-    margin-top: 120px;
     background: #000;
 }
 
@@ -430,84 +299,22 @@ footer {
 .help-link:hover {
     border-bottom: 1px solid #fff;
 }
-
-/* MEDIAQUIERIES PARA 600PX */
+/* MEDIAQUIERE PARA 600PX */
 @media screen and (min-width:600px) {
     header .nav-item {
         font-size: 20px;
     }
-    
-    main .title {
-        font-size: 30px;
-    }
-
-    main .title-description {
-        font-size: 22px;
-    }
-
-    main .luther-life {
-        flex-wrap: nowrap;
-    }
-
-    .preguntas {
-        width:100%;
-    }
-
-    .luther-main-box {
-        width: 50%;
-        position: relative;
-    }
-
-    .luther-main {
-        width: 100%;
-        position: relative;
-    }
-
-    .preguntas {
-        position: relative;
-    }
 }
 
-/* MEDIAQUIERES PARA 450PX (solo el carousel)*/
-@media screen and (min-width:450px) {
-    main .carousel-element {
-        margin-right: 10px;
-    }
-}
-
-/* MEDIAQUIERES PARA 700PX */
+/* MEDIAQUIERES 700PX */
 @media screen and (min-width:700px) {
     header .logo {
         width: 100%;
     }
-    main .luther-title {
-        font-size: 50px;
-    }
-}
-
-/* MEDIAQUIERES PARA 800PX */
-@media screen and (min-width:800px) {
-
-    main .carousel-element {
-        margin-left: 10px;
-    }
-    
-    main .carousel-element img {
-        border: none;
-    }
-
-    main .fa-chevron-left, .fa-chevron-right {
-        font-size: 30px;
-    }
-
 }
 
 /* MEDIAQUIERES PARA 1000PX */
 @media screen and (min-width:1000px) {
-    .container {
-        margin: auto;
-    }
-
     header  .nav-container{
         width: 100%;
         align-items: center;
@@ -532,66 +339,53 @@ footer {
         width: 93px;
     }
 
-    main .text{
-        width: 50%;
-        align-self: center;
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    main .title-description {
+    .footer-one {
+        width: 50%;
+    }
+
+    .social-title {
+        font-size: 30px;
+    }
+
+    footer .faq-title {
         width: 100%;
-}
+        margin-right: 5px;
+    }
 
-.fa-chevron-left, .fa-chevron-right {
-    font-size: 30px;
-}
+    .footer-luther {
+        margin-right: 50px;
+    }
 
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+    .asks {
+        margin: auto;
+        margin-bottom: 5px;
+    }
 
-.footer-one {
-    width: 50%;
-}
+    .luther-footer {
+        display: inline-block;
+        width: 250px;
+    }
 
-.social-title {
-    font-size: 30px;
-}
+    .luther-footer:hover {
+        opacity: .7;
+    }
 
-footer .faq-title {
-    width: 100%;
-    margin-right: 5px;
-}
+    footer .footer-two {
+        width: 50%;
+        margin: 0;
+    }
 
-.footer-luther {
-    margin-right: 50px;
-}
+    .help-title {
+        font-size: 30px;
+    }
 
-.asks {
-    margin: auto;
-    margin-bottom: 5px;
-}
-
-.luther-footer {
-    display: inline-block;
-    width: 250px;
-}
-
-.luther-footer:hover {
-    opacity: .7;
-}
-
-footer .footer-two {
-    width: 50%;
-    margin: 0;
-}
-
-.help-title {
-    font-size: 30px;
-}
-
-footer .help {
-    margin-bottom: 40px;
-}
+    footer .help {
+        margin-bottom: 40px;
+    }
 }
