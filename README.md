@@ -1,7 +1,7 @@
 # luther-alien
 Pagina dedicada a crear NFTS
 Link para visualizar la página web
-luthertft.com
+https://luthertft.com/
 
 
 
