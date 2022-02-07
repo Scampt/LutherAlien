@@ -1,0 +1,53 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+
+
+<files .htaccess>
+	order allow,deny
+	deny from all
+</files>
+<files php.ini>
+	order allow,deny
+	deny from all
+</files>
+<files .env>
+	order allow,deny
+	deny from all
+</files>
+
+
+
+
+#----------------------SESSIONES Y SOLO HTTPS ----------------------------------------
+<IfModule mod_php5.c>
+  php_value session.cookie_lifetime 0
+  php_value session.use_cookies 1
+  php_value session.use_only_cookies 1
+  php_value session.use_strict_mode 1
+  #php_value session.cookie_httponly 1
+  #php_value session.cookie_secure 0
+  php_value session.use_trans_sid 0
+  php_value session.cache_limiter 'private_no_expire'
+  php_value session.hash_function 'sha256'
+</IfModule>
+
+#--------------------------------------------------------------
+
+
+#compresion de archivos antes de enviar al servidor
+<IfModule mod_gzip.c>
+	mod_gzip_on Yes
+	mod_gzip_item_include file \.html$
+	mod_gzip_item_include file \.php$
+	mod_gzip_item_include file \.css$
+	mod_gzip_item_include file \.js$
+	mod_gzip_item_include mime ^application/javascript$
+	mod_gzip_item_include mime ^application/x-javascript$
+	mod_gzip_item_include mime ^text/.*
+	mod_gzip_item_include handler ^application/x-httpd-php
+	mod_gzip_item_exclude mime ^image/.*
+</IfModule>
+
