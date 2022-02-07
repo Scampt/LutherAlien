@@ -1,0 +1,12 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/luthertf/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp collections.html $DEPLOYPATH
+    - /bin/cp terms.html $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp /css $DEPLOYPATH
+    - /bin/cp /fonts $DEPLOYPATH
+    - /bin/cp /img $DEPLOYPATH
+    - /bin/cp /js $DEPLOYPATH
