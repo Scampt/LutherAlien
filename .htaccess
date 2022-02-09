@@ -46,6 +46,8 @@ RewriteEngine On
 	mod_gzip_item_include file \.html$
 	mod_gzip_item_include file \.php$
 	mod_gzip_item_include file \.css$
+	mod_gzip_item_include file \.img$
+	mod_gzip_item_include file \.img/nft-luthers$
 	mod_gzip_item_include file \.js$
 	mod_gzip_item_include mime ^application/javascript$
 	mod_gzip_item_include mime ^application/x-javascript$
